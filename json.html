@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <h2>
+
+        Create Object from JSON String
+
+    </h2>
+
+    <p id="demo"></p>
+
+    <script>
+
+        let text='{"employees":['+
+
+        '{"firstName":"Ram","lastName":"Sita"},'+
+
+        '{"firstName":"krishna,"lastName":"Radha"},'+
+
+        '{"firstName":"Shiva","lastName":"Parvathi"},'+
+
+        '{"firstName":"Hunuman","lastName":"Rama"},'+
+
+        '{"firstName":"harika","lastName":"hari"}]}';
+
+
+
+
+    const obj=JSON.parse(text);
+
+    document.getElementById("demo").innerHTML=
+
+    obj.employees[1].firstName+" "+obj.employees[1].lastName;
+
+    </script>
+
+</body>
+
+</html>

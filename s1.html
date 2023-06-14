@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Student Grade</title>
+
+<body bgcolor="powderblue">
+    <h3>Enter Student Percentage</h3>
+    <table >
+        <tr><td>Name</td>
+        <td><input type ="text" placeholder="Enter Name" id="name"</td></tr>
+        <tr><td>Email</td>
+            <td><input type ="text" placeholder="Enter Email" id="email"</td></tr>
+            <tr><td>Date of Birth</td>
+                <td><input type ="date" placeholder="Enter Date Of Birth" id="dob"</td></tr>
+    </table>
+    <input type="text" placeholder="Enter Percentage" id="percentage">
+    <button type="button" onClick="checkGrade()">Check Grade</button>
+    <p id="demo"></p>
+    <script type="text/javascript">
+        function checkGrade() {
+            var x, p, text;
+            p = document.getElementById("percentage").value;
+            x = parseInt(p);
+
+            if (x > 90 && x <= 100) {
+                document.getElementById("demo").innerHTML = "A1";
+            }
+            else if (x > 80 && x <= 90) {
+                document.getElementById("demo").innerHTML = "A2";
+            }
+            else if (x > 70 && x <= 80) {
+                document.getElementById("demo").innerHTML = "A3";
+            }
+            else if (x >= 1 && x <= 60) {
+                document.getElementById("demo").innerHTML = "Fail";
+            }
+            else {
+                document.getElementById("demo").innerHTML = "Invalid data";
+            }
+        }
+    </script>
+</body>
+</head>
+
+</html>
